@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Deploy
 
 # Controls when the workflow will run
 on:
@@ -18,6 +18,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      
+      - name: Clone submodules
+        run: git submodule update --init --recursive        
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -25,15 +28,15 @@ jobs:
           hugo-version: '0.98.0'
       
       - name: Build content
-        run: hugo --minify
+        run: hugo
       
       - name: Deploy
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
+          username: ${{ secrets.USER }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.PRIVKEY }}
-          source: "public"
-          debug: true
+          source: "public/*"
+          rm: true
           target: "/usr/share/nginx/sites/brvy.space"
