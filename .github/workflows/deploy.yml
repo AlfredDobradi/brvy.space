@@ -35,4 +35,5 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.PRIVKEY }}
           source: "public"
+          debug: true
           target: "/usr/share/nginx/sites/brvy.space"
