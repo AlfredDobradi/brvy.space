@@ -1,6 +1,6 @@
 ---
 title: "Server Shennanigans"
-date: 2022-05-04T12:48:14+01:00
+date: 2022-05-04T13:00:00+01:00
 draft: false
 tags: [boltcutter, mastodon, ansible, elastic, kibana, fluentd]
 ---
