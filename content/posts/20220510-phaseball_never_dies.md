@@ -386,7 +386,8 @@ __At bat: Peadar Ó Nualláin | 6/6/7 | Batting Target: 19__
 > _(d100: 16; Pitch roll: 4; Pitch modifier: -3; MSS: 17)_    
 > Result: HIT  
 
-And a run comes in: Aimee Ní Laoghaire
+__And a run comes in: Aimee Ní Laoghaire__
+
 __At bat: Aoibh Kavanagh | 5/5/5 | Batting Target: 15__  
 > Chloe Bell is throwing a CHANGEUP!  
 > Aoibh Kavanagh swings their bat...  
