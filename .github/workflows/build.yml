@@ -41,5 +41,5 @@ jobs:
           tags: |
             alfreddobradi/blog.brvy.space:${{ github.ref_name }}
             alfreddobradi/blog.brvy.space:latest
-            ghcr.io/${OWNER}/blog.brvy.space:${{ github.ref_name }}
-            ghcr.io/${OWNER}/blog.brvy.space:latest
+            ghcr.io/alfreddobradi/blog.brvy.space:${{ github.ref_name }}
+            ghcr.io/alfreddobradi/blog.brvy.space:latest
