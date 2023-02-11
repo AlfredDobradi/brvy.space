@@ -9,4 +9,5 @@ WORKDIR /dist
 RUN hugo
 
 FROM nginx:1.23
+LABEL org.opencontainers.image.description Nginx image serving the content from https://github.com/alfreddobradi/blog.brvy.space
 COPY --from=build /dist/public /usr/share/nginx/html
