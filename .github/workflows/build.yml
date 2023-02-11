@@ -1,0 +1,13 @@
+name: Build Docker image
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  build:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-20.04
+    steps:
+    - run: |
+        echo "Ref: ${{ github.ref_name }}"
