@@ -25,6 +25,13 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - 
+        name: Login to 0x42 registry
+        uses: docker/login-action@v2
+        with:
+          registry: artifacts.dashboards.0x42.in
+          username: ${{ secrets.BIN_USERNAME }}
+          password: ${{ secrets.BIN_TOKEN }}
       -
         name: Login to GitHub Container Registry
         uses: docker/login-action@v2
@@ -41,5 +48,7 @@ jobs:
           tags: |
             alfreddobradi/blog.brvy.space:${{ github.ref_name }}
             alfreddobradi/blog.brvy.space:latest
+            artifacts.dashboards.0x42.in/docker/blog.brvy.space:${{ github.ref_name }}
+            artifacts.dashboards.0x42.in/docker/blog.brvy.space:latest
             ghcr.io/alfreddobradi/blog.brvy.space:${{ github.ref_name }}
             ghcr.io/alfreddobradi/blog.brvy.space:latest
