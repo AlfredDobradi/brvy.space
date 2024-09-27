@@ -1,7 +1,7 @@
 ---
 title: Gaggle of Updates
 date: 2024-09-27T08:24:05+01:00
-draft: true
+draft: false
 tags: [games, general, nerd]
 ---
 
